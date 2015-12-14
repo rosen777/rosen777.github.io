@@ -1,0 +1,56 @@
+body {
+	color: blue;
+	background-color: black;
+	text-decoration: oblique;
+	text-align: center;
+	font-size: 20px;
+}
+h1 {
+	color: blue;
+	background-color: black;
+	text-decoration: oblique;
+	text-align: center;
+	font-size: 20px;
+}
+p 	{
+	color: yellow;
+	background color: black;
+	text-decoration: oblique;
+	text-align: center;
+	font-size: 20px;
+}
+ul {
+	color: blue;
+	background-color: black;
+	text-decoration: oblique;
+	text-align: center;
+	font-size; 20px;
+}
+li {
+	color: blue;
+	background-color: black;
+	text-decoration: oblique;
+	text-align: center;
+	font-size: 20px;
+}
+img {
+	color: yellow;
+	background-color: black;
+	text-decoration: oblique;
+	text-align: center;
+	font-size: 20px;
+}
+#slogan {
+	color: blue;
+	background-color: black;
+	text-decoration: oblique;
+	text-align: center;
+	font-size: 20px;
+}
+#reference {
+ 	color: blue;
+ 	background-color: black;
+	text-decoration: oblique;
+	text-align: center;
+	font-size: 20px;
+}
