@@ -1,9 +1,11 @@
+@import url(https://fonts.googleapis.com/css?family=Economica);
+
 body {
 	color: blue;
 	background-color: black;
 	text-decoration: oblique;
 	text-align: center;
-	font-family: 'Lobster', cursive;
+	font-family: 'Economica', sans-serif;
 	font-size: 20px;
 }
 h1 {
@@ -11,7 +13,7 @@ h1 {
 	background-color: black;
 	text-decoration: oblique;
 	text-align: center;
-	font-family: 'Lobster', cursive;
+	font-family: 'Economica', sans-serif;
 	font-size: 20px;
 }
 p 	{
