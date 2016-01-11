@@ -1,0 +1,58 @@
+@import url(https://fonts.googleapis.com/css?family=Economica);
+
+body {
+	color: #404040;
+	background-color: #fff;
+	text-decoration: oblique;
+	text-align: center;
+	font-family: 'Economica', sans-serif;
+	font-size: 20px;
+}
+h1 {
+	color: #666;
+	background-color: #FFED74;
+	text-decoration: oblique;
+	text-align: center;
+	font-family: 'Economica', sans-serif;
+	font-size: 20px;
+}
+header {
+	background-color: #FFED74;
+	border: 1px black solid;
+	padding: 20px;
+}
+nav {
+background-color: #E8C66A;
+border: 1px black solid;
+padding: 20px;
+}
+aside {
+background-color: #FFC675;
+border: 1px black solid;
+padding: 20px;
+}
+footer {
+	background-color: #FF957E;
+	border: 1px black solid;
+	padding: 20px;
+}
+section {
+	background-color: #FFE2B8;
+	border: 1px black solid;
+	padding: 20px;
+}
+ul {
+	color: blue;
+	background-color: #FF957E;
+	text-decoration: oblique;
+	text-align: center;
+	font-size: 20px;
+}
+li {
+	color: blue;
+	background-color: #FF957E;
+	text-decoration: oblique;
+	text-align: center;
+	font-size: 20px;
+}
+
