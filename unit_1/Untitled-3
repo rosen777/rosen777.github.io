@@ -1,0 +1,67 @@
+using System;
+class TwitterPosts
+{
+    public static void Main(string[] args)
+    {
+        string str1 = "Да се програмира на C# никак не е сложно!";
+        string str2 = string.Copy(str1);
+        string str3 = "C# стринговете са най ефективни.";
+        string strUp, strLow;
+        int result, idx;
+
+        Console.WriteLine(("str1: " + str1));
+        Console.WriteLine("Дължината на str1: " + str1.Length);
+        //Създаване на версии на низа str1 с малки и големи букви
+        strLow = str1.ToLower();
+        strUp = str1.ToUpper();
+        Console.WriteLine("Вариант на низа str1 с малки букви:\n" + strLow);
+        Console.WriteLine("Вариант на низа str1 с големи букви:\n" + strUp);
+        Console.WriteLine();
+        //Извеждане на низа str1 посимволно
+        Console.WriteLine("Извеждане на низа str1 посимволно.");
+        for (int i = 0; i < str1.Length; i++)
+            Console.Write(str1[i]);
+        Console.WriteLine("\n");
+        //Сравняване на низовете.
+        if (str1 == str2)
+            Console.WriteLine("str1 == str2");
+        else
+            Console.WriteLine("str1 != str2");
+        if (str1 == str3)
+            Console.WriteLine("str1 == str3");
+        else
+            Console.WriteLine("str1 != str3");
+        result = str1.CompareTo(str3);
+        if (result == 0)
+            Console.WriteLine("Низовете str1 и str3 са еднакви.");
+        else if (result < 0)
+            Console.WriteLine("Низът str1 е по-малък от низ str3");
+        else
+            Console.WriteLine("Низът str1 е по-голям от str3");
+        Console.WriteLine();
+        //Проверка дали едно от двете съобщените е под 200 символа.
+        if (str1.Length < 200 != str2.Length < 200)
+        {
+            Console.WriteLine("Само съобщение 1 е под допустимите 200 максимални символа. Изплозвай съобщение 1.");
+        }
+        else if (str2.Length < 200 != str1.Length < 200)
+        {
+            Console.WriteLine("Само съобщение 2 е под допустимите 200 максимални символа. Изплозвай съобщение 2.");
+        }
+        else if (str1.Length < 200 && str2.Length < 200)
+        {
+            Console.WriteLine("Съобщение 1 и съобщение 2 са допустимите 200 максимални символа. Изплозвай по избор.");
+        } else {
+            Console.WriteLine("Нито съобщение 1 или съобщение 2 са допустимите 200 максимални символа. Не използвай нито едно съобщение");
+        }
+         //Присвояване на нов низ на променливата str2.
+        str2 = "Един Два Три Един";
+        //Търсене на низ.
+        idx = str2.IndexOf("Един");
+        Console.WriteLine("Индексът на началото на първия подниз Един: " + idx);
+        idx = str2.LastIndexOf("Един");
+        Console.WriteLine("Индексът на начало на последния подниз Един: " + idx);
+    }
+   
+}
+

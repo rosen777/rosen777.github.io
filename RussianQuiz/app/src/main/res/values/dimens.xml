@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<layout_marginTop name="marginAtTop">"5dp</layout_marginTop>
+   <layout_marginLeft name="marginAtLeft">80dp</layout_marginLeft>
+    <layout_marginRight name="marginAtRight">5dp</layout_marginRight>
+    <layout_marginRight name="marginAtRight2">6dp</layout_marginRight>
+    <layout_marginRight name="marginAtRight3">2dp</layout_marginRight>
+    <layout_marginTop name="marginAtTop2">8dp"</layout_marginTop>
+    <paddingTop name="paddingAtTop">20dp"</paddingTop>
+    <layout_width name="widthQuestions">87dp</layout_width>
+    <layout_width name="heightQuestions">48dp</layout_width>
+
+</resources>

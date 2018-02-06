@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">RussianQuiz</string>
+    <string name="question1">How do you say \'once upon a time\' in Russian?</string>
+    <string name="answer1">А) иногда</string>
+    <string name="answer2">Б) когда-то</string>
+    <string name="answer3">В) никогда</string>
+    <string name="answer4">Г) прежде</string>
+    <string name="question2">How do you say \'before\' in Russian?</string>
+    <string name="answer5">А) раньше</string>
+    <string name="answer6">Б) иногда</string>
+    <string name="answer7">В) до сих пор</string>
+    <string name="answer8">Г) прежде</string>
+    <string name="question3">Write the correct English equivalent of некоторый</string>
+    <string name="question4">Which date is \"девятого ноября тысяча девятьсот восемьдесят девятого года\"?</string>
+    <string name="answer10">А) 4th Nov. 1984</string>
+    <string name="answer11">Б) 9th Nov. 2017</string>
+    <string name="answer12">В) 10th Feb. 1999</string>
+    <string name="answer13">Г) 9th Nov. 1989</string>
+    <string name="submitQuiz">Submit Quiz</string>
+    <string name="reset">Try Again</string>
+    <string name ="correct_answers_summary">Your total number of correct answers is:</string>
+    <string name ="max_answers_summary">Congratulations! Your have a maximum score of:</string>
+    <string name ="zero_summary"></string>
+    <string name = "duplicate_answers_summary">You have already submitted your quiz. Click reset to start again.</string>
+    <string name="zero">0</string>
+    <string name="check_answer">Check Answer</string>
+</resources>

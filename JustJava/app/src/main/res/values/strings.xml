@@ -1,0 +1,41 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!--
+        Strings in the activity_main.xml file
+        -->
+
+    <string name="app_name">Just Java</string>
+    <string name="name">Name</string>
+    <string name="order">ORDER</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="initialOrder">$0</string>
+    <string name="whipped_cream">Whipped cream</string>
+    <string name="chocolate">Chocolate</string>
+    <string name="quantity">Quantity</string>
+    <string name="toppings">Toppings</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Whipped cream question. [CHAR LIMIT=NONE] -->
+    <string name="whippedCreamQ">Add whipped cream? </string>
+
+    <!-- Chocolate question. [CHAR LIMIT=NONE] -->
+    <string name="chocolateQ">Add chocolate? </string>
+
+    <!-- Thank you message for the order summary. [CHAR LIMIT=NONE] -->
+    <string name="thank_you">Thank you!</string>
+
+    <!-- The total of the order summary. [CHAR LIMIT=NONE] -->
+    <string name="total">Total: $</string>
+
+    <!--
+        Name for the order summary. It will be shown in the format of "Name: Amy" where Amy is the user's name. [CHAR LIMIT=NONE]
+        -->
+
+    <string name="order_summary_name">Name: <xliff:g id="name" example="Amy">%s</xliff:g></string>
+
+    <!--
+        Subject for the order summary. It will be shown in the format of "JustJava Order for Amy where Amy is the user's name.
+        -->
+    <string name="order_summary_email_subject">JustJava Order for <xliff:g id="name" example="Amy">%s</xliff:g></string>
+
+</resources>

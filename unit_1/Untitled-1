@@ -1,0 +1,78 @@
+using System;
+
+namespace BookI_Lesson4_WhileBreak
+{
+    class MainClass
+    {
+        public static void Main(string[] args)
+        {
+            //Определяне на максималния лихвен процент.
+            int maxInterest = 40;
+            //Покана за въвеждане стойността на внесената сума.
+            //Поканата се повтаря докато не се въведе коректна
+            //стойност.
+            decimal deposit;
+            while(true){
+                Console.Write("Въведете стойността на депозита: ");
+                string depositInput = Console.ReadLine();
+                deposit = Convert.ToDecimal(depositInput);
+                //Излизане от цикъла
+                //ако въведенета стойност е коректна
+                if (deposit >=0)
+                {
+                    break;
+                }
+                //Генериране на съобщение за грешно въвеждане.
+                Console.WriteLine("Депозитът не може да бъде" + " отрицателен.");
+                Console.WriteLine("опитайте отново.");
+                Console.WriteLine();
+            }
+            //Въвеждане на стойността на лихвения процент.
+            decimal interest;
+            while(true)
+            {
+                Console.Write("Въведете лихвения процент: ");
+                string interestInput = Console.ReadLine();
+                 interest = Convert.ToDecimal(interestInput);
+                //Ако лихвеният процент е отрицателен
+                //или е твърде голям...
+                if (interest >= 0 && interest < maxInterest) {
+                    break;
+                }
+                //генерира съобщение за грешка.
+                Console.WriteLine("Опитайте отново.");
+                Console.WriteLine();
+            }
+            //Въведеният депозит и лихвен процент са коректни.
+            //Въвеждане срока на депозита.
+            Console.Write("Въведете срока на депозита в години: ");
+            string durationInput = Console.ReadLine();
+            int duration = Convert.ToInt32(durationInput);
+            //Изваждане на входните данни
+            // (верификация на входа).
+            Console.WriteLine();
+            Console.WriteLine("Депозит = " + deposit);
+            Console.WriteLine("Лихвен процент = " + interest + "%");
+            Console.WriteLine("Срок = " + duration + " години ");
+            Console.WriteLine();
+            Console.WriteLine("Състояние на депозита" + "в края на всяка година");
+            //Цикъл повтарящ се толкова пъти,
+            //колкото е срокът на дпозита
+            int year = 1;
+            while (year <= duration)
+            {
+                //Изчислява лихвата
+                decimal interestRate;
+                interestRate = deposit * (interest / 100);
+                //Изчисляване сумата на депозита
+                deposit = deposit + interestRate;
+                //Закръглява сумата до стотинка.
+                deposit = decimal.Round(deposit, 2);
+                //Извежда натрупаната сума за текущата година.
+                Console.WriteLine(year + "-а година = " + deposit);
+                //Преход към следващата година.
+                year++;
+            }
+        }
+    }
+}
