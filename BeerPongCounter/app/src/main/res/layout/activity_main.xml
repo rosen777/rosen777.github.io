@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    >
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorRed"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:textSize="14sp"
+                android:textColor="@color/colorWhite"
+                android:color="#616161"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/pc_nerd" />
+
+            <TextView
+                android:id="@+id/team_a_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal"
+                android:textSize="56sp"
+                android:textColor="@color/colorWhite"
+                android:text="@string/zero" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorWhite"
+                android:orientation="vertical">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:onClick="addOneForTeamB"
+                    android:background="@drawable/my_button_bg"
+                    android:textColor="@color/colorRed"
+                    android:drawableBottom="@drawable/beer_pong_cup32"
+                    android:text="@string/hit_cup" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:drawableBottom="@drawable/beer_pong_cup64"
+                    android:background="@drawable/my_button_bg"
+                    android:textColor="@color/colorRed"
+                    android:onClick="addTwoForTeamB"
+                    android:text="@string/bounce" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:drawableBottom="@drawable/beer_pong_cup_96"
+                    android:background="@drawable/my_button_bg"
+                    android:textColor="@color/colorRed"
+                    android:onClick="addThreeForTeamB"
+                    android:text="@string/death_cup" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/darker_gray"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:background="@color/colorRed"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:textSize="14sp"
+                android:textColor="@color/colorWhite"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/frat_bros" />
+
+            <TextView
+                android:id="@+id/team_b_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal"
+                android:textSize="56sp"
+                android:textColor="@color/colorWhite"
+                android:text="@string/zero" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorWhite"
+                android:orientation="vertical">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:background="@drawable/my_button_bg"
+                    android:onClick="addOneForTeamB"
+                    android:textColor="@color/colorRed"
+                    android:drawableBottom="@drawable/beer_pong_cup32"
+                    android:text="@string/hit_cup" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:drawableBottom="@drawable/beer_pong_cup64"
+                    android:background="@drawable/my_button_bg"
+                    android:textColor="@color/colorRed"
+                    android:onClick="addTwoForTeamB"
+                    android:text="@string/bounce" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:drawableBottom="@drawable/beer_pong_cup_96"
+                    android:background="@drawable/my_button_bg"
+                    android:textColor="@color/colorRed"
+                    android:onClick="addThreeForTeamB"
+                    android:text="@string/death_cup" />
+            </LinearLayout>
+
+        </LinearLayout>
+        </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/colorRed"
+        android:textColor="@color/colorWhite"
+        android:onClick="resetScore"
+        android:text="@string/new_game" />
+
+</RelativeLayout>
+
+
+
+

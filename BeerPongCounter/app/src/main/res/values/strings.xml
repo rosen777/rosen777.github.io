@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Beer Pong Counter</string>
+    <string name="hit_cup">Hit the Cup</string>
+    <string name="bounce">Bounce</string>
+    <string name="death_cup">Death Cup</string>
+    <string name="pc_nerd">PC Nerds</string>
+    <string name="frat_bros">Frat Bros</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+    <string name="zero">0</string>
+    <string name="vs">vs</string>
+    <string name="new_game">New Game</string>
+</resources>
