@@ -3,4 +3,9 @@
     <dimen name="activity_vertical_margin" />
     <dimen name="activity_horizontal_margin" />
     <dimen name="radius">1dp</dimen>
+    <dimen name="layout_twenty_four">24dp</dimen>
+    <dimen name="layout_sixteen">16dp</dimen>
+    <dimen name="layout_eight">8dp</dimen>
+    <dimen name="layout_zero">0dp</dimen>
+    <dimen name="layout_one">1dp</dimen>
 </resources>

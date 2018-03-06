@@ -17,15 +17,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Resets the score for Team A to 0
-     */
-
-    public void resetForTeamA (View v) {
-        scoreTeamA = 0;
-        displayForTeamA(scoreTeamA);
-    }
-
-    /**
      * Display that team A has scored one point
      */
     public void addOneForTeamA(View view) {
@@ -80,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
      * Resets the scores for Team A & Team B to 0
      */
 
-    public void resetScore(View v) {
+    public void newGame(View v) {
         scoreTeamA = 0;
         scoreTeamB = 0;
         displayForTeamA(scoreTeamA);
@@ -92,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
      */
 
     public void displayForTeamA (int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_a_score);
+        TextView scoreView = findViewById(R.id.team_a_score);
         scoreView.setText(String.valueOf(score));
     }
 
@@ -101,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given score for Team B.
      */
     public void displayForTeamB(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_b_score);
+        TextView scoreView = findViewById(R.id.team_b_score);
         scoreView.setText(String.valueOf(score));
     }
 
