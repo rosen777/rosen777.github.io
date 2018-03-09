@@ -1,0 +1,125 @@
+@import url(https://fonts.googleapis.com/css?family=Economica);
+
+body {
+	color: #404040;
+	background-color: #fff;
+	text-decoration: oblique;
+	text-align: center;
+	font-family: 'Economica', sans-serif;
+	font-size: 20px;
+}
+
+h1 {
+	color: #666;
+	background-color: #FFED74;
+	text-decoration: oblique;
+	text-align: center;
+	font-family: 'Economica', sans-serif;
+	font-size: 1em;
+}
+
+header {
+	background-color: #FFED74;
+	border: 1px black solid;
+	padding: 1em;
+}
+
+nav {
+width: 96.6%;
+background-color: #E8C66A;
+border: 1px black solid;
+padding: 1.6%;
+}
+
+.wrapper {
+	width: 100%;
+	float: none;
+}
+
+#two_column {
+	background-color: #FFB7CF;
+	border: 1px black solid;
+	width: 96.6%;
+	padding: 1.6%;
+}
+
+#left {
+	background-color: violet;
+	border: 1px black solid;
+	padding: 1.6%;
+	float: left;
+	width: 27%;
+}
+
+#right {
+	background-color: pink;
+	border: 1px black solid;
+	padding: 1.6%;
+	float: right;
+	width: 55.8%;
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+footer {
+	background-color: #FF957E;
+	border: 1px black solid;
+	padding: 20px;
+}
+
+ul {
+	color: blue;
+	background-color: #FF957E;
+	text-decoration: oblique;
+	text-align: center;
+	font-size: 1em;
+}
+li {
+	color: blue;
+	background-color: #FF957E;
+	text-decoration: oblique;
+	text-align: center;
+	font-size: 1em;
+}
+
+@media only screen and (max-width: 680px) {
+	#left {
+		float: none;
+		width: auto;
+	}
+
+	#right {
+		float: none;
+		width: auto;
+	}
+	nav {
+		float: none;
+	}
+}
+
+@media only screen and (max-width: 770px) {
+	#left {
+		padding: 0.8%;
+		font-size: 0.8em;
+	}
+	#right {
+		padding: 0.8%;
+		font-size: 0.8em;
+	}
+	#slogan {
+	font-size: 0.8em;
+}
+	.wrapper {
+		font-size: 0.8em;
+	}
+}
+
+
+
