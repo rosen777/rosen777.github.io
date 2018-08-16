@@ -1,0 +1,193 @@
+<!DOCTYPE HTML>  
+<html>
+<head>
+<style>
+
+    body {
+    background-color: #fff;
+    color: #666666;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+input[type=text], select {
+	background-color: #fff;
+	width: 80%;
+    padding: 12px 20px;
+    margin: 0px 0;
+    display: inline-block;
+    border: 1px sold #ccc;
+}
+
+input[type=number], select {
+	background-color: #fff;
+	width: 80%;
+    padding: 12px 20px;
+    margin: 0px 0px;
+    display: inline-block;
+    border: 1px sold #ccc;
+}
+
+input[type=submit] {
+	width: 35%;
+    background-color: #F0F0F0;
+    color: #989A99;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border-style: solid;
+    font-size: 16px;
+    border-width: 1px;
+    border-color: #8E8E8E;
+    border-radius: 4px;
+    cursor: pointer;
+    position: absolute;
+    left: 20%;
+}
+
+input[type=submit]:hover {
+	background-color: #c0c0c0;
+    color: #fff;
+}
+
+    textarea {
+	width: 60%;
+    padding: 0px 20px;
+    margin: 0px 0px 0px -19.5%;
+    margin-bottom: 12px; 
+    resize: vertical;
+    }
+    
+    
+/* Add a background color and some padding around the form */
+.container {
+	border-radius: 5px;
+    background-color: #fff;
+    padding: 20px;
+}
+
+label {
+    color: #666666;
+	float: left;
+    width: 10em;
+    margin: 0px 1em 0px 0px;
+}
+    
+.error {
+        color: #DB3328;
+        font-size: 10px;
+    }
+    
+</style>
+</head>
+<body>  
+
+<?php
+// define variables and set to empty values
+$firstNameErr = $lastNameErr =  $emailErr = $commentsErr = "";
+$firstName = $lastName =  $email = $telNumber = $comments = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST")
+{
+  if (empty($_POST["firstName"])) {
+    $firstNameErr = "First name is required";
+  } else {
+    $firstName = test_input($_POST["firstName"]);
+    // check if the first name only contains letters and whitespace
+    if (!preg_match("/^[a-zA-Z ]*$/",$firstName)) {
+      $firstNameErr = "Only letters and white space allowed"; 
+    }
+  }
+    
+      if (empty($_POST["lastName"])) {
+    $lastNameErr = "Last name is required";
+  } else {
+    $lastName = test_input($_POST["lastName"]);
+    // check if the last name only contains letters and whitespace
+    if (!preg_match("/^[a-zA-Z ]*$/",$lastName)) {
+      $lastNameErr = "Only letters and white space allowed"; 
+    }
+  }
+    
+    if (empty($_POST["telNumber"])) {
+        $telNumber = "";
+    } else {
+     $telNumber = test_input($_POST["telNumber"]);   
+    }
+  
+  if (empty($_POST["email"])) {
+    $emailErr = "Email is required";
+  } else {
+    $email = test_input($_POST["email"]);
+    // check if e-mail address is well-formed
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      $emailErr = "Invalid email format"; 
+    }
+  }
+  
+  if (empty($_POST["comments"])) {
+    $commentsErr = "Comments field is required";
+  } else {
+    $comments = test_input($_POST["comments"]);
+  }
+}
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+
+?>
+    
+<div class="container">
+<form id="bssaForm" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+  <label for="fname">
+    First Name: * <span class="error"><?php echo $firstNameErr;?></span>
+   </label>
+      &nbsp;<input type="text" id="fname" name="firstName" value="<?php echo $firstName;?>">
+  <br>
+     <label for="lname">
+    Last Name: * <span class="error"><?php echo $lastNameErr;?></span>
+   </label>
+      &nbsp;<input type="text" id="lname" name="lastName" value="<?php echo $lastName;?>">
+  <br>
+    <label for="email">
+    Email Address: *<span class="error"><?php echo $emailErr;?></span>
+    </label>
+       &nbsp;<input type="text" id="email" name="email" value="<?php echo $email;?>">
+  <br>
+    <label for="telNumber">
+  Telephone Number 
+     </label>
+       &nbsp;<input type="number" id="number" name="telNumber" value="<?php echo $telNumber;?>">
+  <br>
+    <label for="comments">
+  Comments: *<span class="error"><?php echo $commentsErr;?></span> 
+    </label>
+       &nbsp;<textarea id="comments" name="comments" rows="5" cols="40"><?php echo $comments;?></textarea>
+  <br><br>
+  <input type="submit" name="submit" value="Submit Form">  
+</form>
+    
+    </div>
+
+    <div class="container">
+        <br><br>
+<?php
+echo "<h2>Your Input:</h2>";
+echo $firstName;
+echo "<br>";
+echo $lastName;
+echo "<br>";
+echo $email;
+echo "<br>";
+echo $telNumber;
+echo "<br>";
+echo $comments;
+?>
+        </div>
+
+</body>
+</html>
